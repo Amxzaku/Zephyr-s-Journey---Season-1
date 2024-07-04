@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmavcfne7ywod"]
+[gd_scene load_steps=11 format=3 uid="uid://cmavcfne7ywod"]
 
 [ext_resource type="Texture2D" uid="uid://djbjcagosuc4t" path="res://assets/sprites/slime_green.png" id="1_7dnou"]
 [ext_resource type="Script" path="res://scripts/enemy_slime.gd" id="1_u3x7s"]
 [ext_resource type="PackedScene" uid="uid://ckcx4gn152cmh" path="res://scenes/killzone.tscn" id="2_uv5k0"]
+[ext_resource type="PackedScene" uid="uid://b5ojwowrac83h" path="res://Health Bar/health scene.tscn" id="4_dfum8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a513j"]
 atlas = ExtResource("1_7dnou")
@@ -66,3 +67,9 @@ target_position = Vector2(11, 0)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(0, -8)
 target_position = Vector2(-11, 0)
+
+[node name="HealthBar" parent="." instance=ExtResource("4_dfum8")]
+offset_left = -12.0
+offset_top = -22.0
+offset_right = 12.0
+offset_bottom = -18.0

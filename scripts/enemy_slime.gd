@@ -4,9 +4,13 @@ const speed = 60
 
 var direction = 1
 
+var is_knocked_back = false
+
 @onready var ray_cast_right = $RayCastRight
 @onready var ray_cast_left = $RayCastLeft
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var healthbar = $HealthBar
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,4 +23,3 @@ func _process(delta):
 		animated_sprite.flip_h = false
 		
 	position.x += direction * speed * delta
-	

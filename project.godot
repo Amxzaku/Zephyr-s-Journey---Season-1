@@ -14,6 +14,10 @@ config/name="Project-2D"
 run/main_scene="res://scenes/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
+[autoload]
+
+GameBgMusic="*res://scenes/game_bg_music.tscn"
+
 [input]
 
 right={
